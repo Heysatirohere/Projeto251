@@ -8,7 +8,9 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
+    public float moveSpeed = 5f;
+    public float walkSpeed;
+    public float sprintSpeed;
     public Transform orientation;
     private float horizontalInput;
     private float verticalInput;
@@ -23,8 +25,18 @@ public class Movement : MonoBehaviour
     public float playerHeight; 
     public LayerMask whatIsGround;
     public bool grounded;
-    public KeyCode jumpKey = KeyCode.Space; 
+    public KeyCode jumpKey = KeyCode.Space;
+    public KeyCode sprintKey = KeyCode.LeftShift;
 
+    public MovementState state; 
+
+    public enum MovementState
+    {
+        walking,
+        sprinting, 
+        air
+
+    }
 
     void Start()
     {
@@ -37,11 +49,33 @@ public class Movement : MonoBehaviour
     {
         MovePlayer();
     }
+
+    private void StateHandler()
+    {
+        if (grounded && !Input.GetKey(sprintKey))
+            {
+            state = MovementState.walking;
+            moveSpeed = walkSpeed;
+            print(!Input.GetKey(sprintKey));
+
+
+        }
+       else if (grounded && Input.GetKey(sprintKey))
+        {
+            state = MovementState.sprinting;
+            moveSpeed = sprintSpeed;
+        }
+        
+
+    }
     void MovePlayer()
     {
  
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        if (grounded)
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        else if (!grounded)
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * multiplier, ForceMode.Force);
 
     }
 
@@ -61,8 +95,8 @@ public class Movement : MonoBehaviour
             ReadytoJump = false;
             Jump();
             Invoke("ResetJump", jumpCoolDown);
-            print("teste");
         }
+        StateHandler();
     }
 
     private void speedControl()
@@ -89,5 +123,5 @@ public class Movement : MonoBehaviour
     {
         ReadytoJump = true; 
     }
-    //
+   
 }
