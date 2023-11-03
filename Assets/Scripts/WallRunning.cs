@@ -62,13 +62,13 @@ public class WallRunning : MonoBehaviour
         {
             if (!pm.Wallrunning)
                 RunningWall();
-            print("Correndo");
+            
         } 
         else
         {
             if (pm.Wallrunning)
                 StoppedRun();
-            print("não correndo");
+           
         }
     }
     

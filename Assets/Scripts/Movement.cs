@@ -60,7 +60,7 @@ public class Movement : MonoBehaviour
             {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
-            print(!Input.GetKey(sprintKey));
+            
 
 
         }
@@ -145,9 +145,9 @@ public class Movement : MonoBehaviour
     private void WallRunningJump()
     {
         if (wr.wallRight)
-            rb.AddForce (-orientation.right * 120, ForceMode.Impulse);
+            rb.AddForce (-orientation.right * 170, ForceMode.Impulse);
         if (wr.wallLeft)
-            rb.AddForce(orientation.right * 120, ForceMode.Impulse);
+            rb.AddForce(orientation.right * 170, ForceMode.Impulse);
 
     }
 
