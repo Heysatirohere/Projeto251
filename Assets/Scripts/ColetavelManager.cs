@@ -10,7 +10,7 @@ public class ColetavelManager : MonoBehaviour
     public static ColetavelManager instance;
     public Text CountItem;
     public Text count;
-    private float timeSec = 150;
+    public float timeSec = 150;
 
     void Awake()
     {
