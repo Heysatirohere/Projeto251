@@ -31,6 +31,7 @@ public class Movement : MonoBehaviour
     public MovementState state;
     private WallRunning wr;
     public int Jumps = 2;
+    public PlayerAudio playerAudio;
     public enum MovementState
     {
         walking,
@@ -46,6 +47,7 @@ public class Movement : MonoBehaviour
         wr = GetComponent<WallRunning>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        playerAudio = GetComponent<PlayerAudio>();
         
     }
 
@@ -140,6 +142,7 @@ public class Movement : MonoBehaviour
         Jumps--;
         if (Jumps < 2) rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        playerAudio.PlayAudio(playerAudio.jumpSFX);
     }
 
     private void WallRunningJump()

@@ -15,6 +15,8 @@ public class DieScene : MonoBehaviour
     {
         if (Input.anyKey)
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             LoadManager.Instance.Load("Menu"); //
         }
         
