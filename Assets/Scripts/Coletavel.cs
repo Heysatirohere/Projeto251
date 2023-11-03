@@ -16,7 +16,7 @@ public class Coletavel : MonoBehaviour
             Destroy(gameObject);
 
         }
-        print(other.gameObject.name);
+       
 
 
     }

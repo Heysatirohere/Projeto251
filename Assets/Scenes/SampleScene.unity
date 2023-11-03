@@ -1938,6 +1938,7 @@ GameObject:
   - component: {fileID: 541887714}
   - component: {fileID: 541887713}
   - component: {fileID: 541887717}
+  - component: {fileID: 541887718}
   m_Layer: 3
   m_Name: Magma
   m_TagString: Untagged
@@ -2053,6 +2054,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &541887718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541887712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194fa524784f6a2479c4d0516689bad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &556198163
 GameObject:
   m_ObjectHideFlags: 0
@@ -4697,6 +4710,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296716460}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1584105363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1584105365}
+  - component: {fileID: 1584105364}
+  m_Layer: 0
+  m_Name: LoadScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1584105364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584105363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae63fd66c06d4446a9d601ec5c039ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1584105365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584105363}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.932684, y: 10.67346, z: 24.764055}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605714043
 GameObject:
   m_ObjectHideFlags: 0
@@ -10071,7 +10128,7 @@ Transform:
   m_GameObject: {fileID: 1670247839}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.8561757, z: -0, w: 0.5166849}
-  m_LocalPosition: {x: 15.71, y: 10.81, z: 21.66}
+  m_LocalPosition: {x: 16.07, y: 10.81, z: 20.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10785,6 +10842,7 @@ MonoBehaviour:
   item: 5
   CountItem: {fileID: 2041085417}
   count: {fileID: 24919127}
+  timeSec: 150
 --- !u!1 &1957893186
 GameObject:
   m_ObjectHideFlags: 0
@@ -11067,3 +11125,4 @@ SceneRoots:
   - {fileID: 1945522715}
   - {fileID: 1062904350}
   - {fileID: 1957893189}
+  - {fileID: 1584105365}
