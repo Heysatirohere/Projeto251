@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits
+  m_Text: "Cr\xE9ditos"
 --- !u!222 &114709891
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1013,7 +1013,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: Jogar
 --- !u!222 &1736145893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1189,8 +1189,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.122, y: -0.00068749}
-  m_SizeDelta: {x: 1375.9379, y: 337.78}
+  m_AnchoredPosition: {x: 17.2374, y: -8.7374}
+  m_SizeDelta: {x: 1424.6743, y: 355.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1944743564
 MonoBehaviour:
@@ -1225,7 +1225,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Heat
+  m_Text: Heat Race
 --- !u!222 &1944743565
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1363,8 +1363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 25.509827, y: 304.5668}
-  m_SizeDelta: {x: -529.8171, y: -741.7437}
+  m_AnchoredPosition: {x: 0.000061035156, y: 321.804}
+  m_SizeDelta: {x: -0.00012207, y: -707.2693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2115857003
 MonoBehaviour:
